@@ -95,13 +95,19 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/ic_pause" />
+                app:icon="@drawable/ic_pause"
+                app:iconSize="50dp"
+                app:iconTintMode="multiply"
+                android:background="@android:color/transparent"/>
 
             <Button
                 android:id="@+id/btnnext"
                 android:layout_toRightOf="@id/playbtn"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/ic_next"
+                app:icon="@drawable/ic_next"
+                app:iconSize="50dp"
+                app:iconTintMode="multiply"
+                android:background="@android:color/transparent"
                 android:layout_width="50dp"
                 android:layout_height="50dp"/>
 
@@ -109,7 +115,10 @@
                 android:id="@+id/btnprev"
                 android:layout_toLeftOf="@id/playbtn"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/ic_previous"
+                app:icon="@drawable/ic_previous"
+                app:iconSize="50dp"
+                app:iconTintMode="multiply"
+                android:background="@android:color/transparent"
                 android:layout_width="50dp"
                 android:layout_height="50dp"/>
 
@@ -118,7 +127,10 @@
                 android:layout_toRightOf="@id/btnnext"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="15dp"
-                android:background="@drawable/ic_fast_forward"
+                app:icon="@drawable/ic_fast_forward"
+                app:iconSize="50dp"
+                app:iconTintMode="multiply"
+                android:background="@android:color/transparent"
                 android:layout_width="40dp"
                 android:layout_height="40dp"/>
 
@@ -127,7 +139,10 @@
                 android:layout_toLeftOf="@id/btnprev"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/ic_fast_rewind"
+                app:icon="@drawable/ic_fast_rewind"
+                app:iconSize="50dp"
+                app:iconTintMode="multiply"
+                android:background="@android:color/transparent"
                 android:layout_width="40dp"
                 android:layout_height="40dp"/>
 
@@ -140,7 +155,7 @@
                 custom:avDensity="0.5"
                 custom:avType="outline"
                 custom:avWidth="4dp"
-                custom:avColor="#FF362E"
+                custom:avColor="#0ae9fc"
                 custom:avSpeed="normal"/>
 
         </RelativeLayout>
