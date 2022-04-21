@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/drawable/ic_music.xml" value="0.144" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/drawable/ic_next.xml" value="0.144" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/drawable/ic_pause.xml" value="0.144" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/drawable/ic_play.xml" value="0.144" />
         <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/drawable/list_bg.xml" value="0.144" />
         <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/layout/activity_player.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/layout/activity_player.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/layout/list_item.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/DilMusicPlayer/app/src/main/res/layout/list_items.xml" value="0.14635416666666667" />
       </map>
     </option>
