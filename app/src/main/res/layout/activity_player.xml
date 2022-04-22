@@ -63,7 +63,7 @@
                 android:layout_marginLeft="20dp"
                 android:text="0:10"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="10sp"/>
 
             <TextView
                 android:id="@+id/txtstop"
@@ -75,7 +75,7 @@
                 android:layout_marginRight="20dp"
                 android:text="4:10"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="10sp"/>
 
         </RelativeLayout>
 
@@ -146,17 +146,16 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"/>
 
-            <com.gauravk.audiovisualizer.visualizer.BarVisualizer
-                xmlns:custom="http://schemas.android.com/apk/res-auto"
+            <com.gauravk.audiovisualizer.visualizer.BarVisualizer xmlns:custom="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/blast"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_alignParentBottom="true"
-                custom:avDensity="0.5"
-                custom:avType="outline"
-                custom:avWidth="4dp"
                 custom:avColor="#0ae9fc"
-                custom:avSpeed="normal"/>
+                custom:avDensity="0.5"
+                custom:avSpeed="normal"
+                custom:avType="outline"
+                custom:avWidth="4dp" />
 
         </RelativeLayout>
 
