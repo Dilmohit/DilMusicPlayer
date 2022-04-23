@@ -127,8 +127,8 @@ public class PlayerActivity extends AppCompatActivity {
         };
         seekmusic.setMax(mediaPlayer.getDuration());
         updateSeekbar.start();
-        seekmusic.getProgressDrawable().setColorFilter(getResources().getColor(R.color.orangetheme), PorterDuff.Mode.MULTIPLY);
-        seekmusic.getThumb().setColorFilter(getResources().getColor(R.color.orangetheme), PorterDuff.Mode.SRC_IN);
+        seekmusic.getProgressDrawable().setColorFilter(getResources().getColor(R.color.maintheme), PorterDuff.Mode.MULTIPLY);
+        seekmusic.getThumb().setColorFilter(getResources().getColor(R.color.maintheme), PorterDuff.Mode.SRC_IN);
 
 
 
