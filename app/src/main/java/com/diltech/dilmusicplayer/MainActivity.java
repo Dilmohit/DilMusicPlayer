@@ -6,12 +6,17 @@ import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.listViewSong);
 
         runtimePermission();
+
 
     }
 
@@ -107,9 +113,6 @@ public class MainActivity extends AppCompatActivity {
             items[i] = mySongs.get(i).getName().toString().replace(".mp3","").replace(".wav","");
         }
 
-//        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
-//        listView.setAdapter(myAdapter);
-
         customAdapter customAdapter = new customAdapter();
         listView.setAdapter(customAdapter);
 
@@ -156,6 +159,10 @@ public class MainActivity extends AppCompatActivity {
 
             return myView;
         }
+
+
     }
 
-}
+    
+    }
+
