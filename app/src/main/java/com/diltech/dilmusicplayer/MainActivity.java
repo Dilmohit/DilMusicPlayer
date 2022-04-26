@@ -1,33 +1,28 @@
 package com.diltech.dilmusicplayer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.EditText;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -37,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     String[] items;
+    customAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +43,41 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         listView = findViewById(R.id.listViewSong);
-
         runtimePermission();
 
-
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater ().inflate ( R.menu.menu,menu );
+        return super.onCreateOptionsMenu ( menu );
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+
+            case R.id.share:
+                Toast.makeText(this, "Share The App", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.about:
+                Toast.makeText(this, "About Us", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.exit:
+                Toast.makeText(this, "Exit The App", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.privacypolicy:
+                Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+
+        return true;
+    }
+
+
 
     public void runtimePermission(){
 
@@ -103,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    void displaySongs(){
+   public void displaySongs(){
 
         final ArrayList<File> mySongs = findSong(Environment.getExternalStorageDirectory());
 
@@ -113,8 +139,8 @@ public class MainActivity extends AppCompatActivity {
             items[i] = mySongs.get(i).getName().toString().replace(".mp3","").replace(".wav","");
         }
 
-        customAdapter customAdapter = new customAdapter();
-        listView.setAdapter(customAdapter);
+        adapter = new customAdapter();
+        listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -132,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    class customAdapter extends BaseAdapter{
+    class customAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
@@ -160,9 +186,8 @@ public class MainActivity extends AppCompatActivity {
             return myView;
         }
 
-
     }
 
-    
-    }
+
+}
 

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DilMusicPlayer</string>
+    <string name="exit">Exit</string>
+    <string name="about">About Us</string>
+    <string name="privacypolicy">Privacy Policy</string>
+    <string name="share">Share Us</string>
 </resources>
