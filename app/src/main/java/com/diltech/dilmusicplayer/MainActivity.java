@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.Menu;
@@ -66,10 +67,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "About Us", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.exit:
-                Toast.makeText(this, "Exit The App", Toast.LENGTH_SHORT).show();
+                finish();
                 break;
             case R.id.privacypolicy:
-                Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
                 break;
 
         }
