@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.privacypolicy:
+                Intent privacyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.freeprivacypolicy.com/live/0489101b-b950-4c49-82fd-e5a9c59d9d9b"));
+                startActivity(privacyIntent);
                 break;
 
         }
